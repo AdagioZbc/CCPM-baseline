@@ -5,6 +5,6 @@ CUDA_VISIBLE_DEVICES=0 python main.py \
           --learning_rate 5e-5 \
           --num_train_epochs 3 \
           --output_dir results \
-          --per_gpu_eval_batch_size=16 \
-          --per_device_train_batch_size=16 \
+          --per_gpu_eval_batch_size=8 \
+          --per_device_train_batch_size=8 \
           --overwrite_output
