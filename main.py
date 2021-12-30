@@ -195,6 +195,12 @@ class DataCollatorForMultipleChoice:
         batch = {k: v.view(batch_size, num_choices, -1) for k, v in batch.items()}
         # Add back labels
         batch["labels"] = torch.tensor(labels, dtype=torch.int64)
+        for k, v in batch.items():
+            print("key")
+            print(k)
+            print("value")
+            print(v.shape)  # (16, 4, 44)
+        exit()
         return batch
 
 
